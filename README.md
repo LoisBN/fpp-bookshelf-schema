@@ -1,47 +1,61 @@
-# Bookshelf Schema — Database Design
+# Bookshelf Schema — SQL & Database Design
 
-Design a database for a personal bookshelf app using SQL and Supabase.
+Design a database schema for a bookshelf app using SQL in the Supabase dashboard.
+
+## What You'll Learn
+
+- SQL `CREATE TABLE` with proper data types
+- `INSERT` statements to add data
+- Foreign keys and table relationships
+- `SELECT` queries with `JOIN`
+- Using the Supabase SQL Editor and Table Editor
+
+## Tech Stack
+
+- **SQL** — database language
+- **Supabase** — hosted PostgreSQL database with visual dashboard
 
 ## Getting Started
 
 ```bash
+# 1. Clone this repo
 git clone https://github.com/LoisBN/fpp-bookshelf-schema.git
 cd fpp-bookshelf-schema
+
+# 2. Open the SQL files in VS Code
+# Then go to your Supabase dashboard → SQL Editor
 ```
 
-Open the SQL files and run them in your Supabase SQL Editor.
-
-## Your Tasks
-
-1. Complete the table definitions in `schema.sql`
-2. Add foreign key relationships between tables
-3. Create proper indexes for query performance
-4. Run the seed data to populate sample books and authors
-5. Verify relationships in Supabase Table Editor
-6. Test your schema with the verification queries
+No `npm install` needed — this exercise is done entirely in the Supabase Dashboard! The SQL files here are what you'll copy into the SQL Editor.
 
 ## Project Structure
 
 ```
-.
-├── schema.sql        # Main table definitions (TODO: complete)
-├── seed.sql          # Sample data for testing
-├── verify.sql        # Query verification scripts
-└── README.md         # This file
+fpp-bookshelf-schema/
+├── README.md      ← You are here
+├── schema.sql     ← Table definitions (CREATE TABLE statements)
+├── seed.sql       ← Sample data (INSERT statements)
+└── verify.sql     ← Test queries (SELECT statements to check your work)
 ```
 
-## Tables to Create
+## Your Exercise Tasks
 
-- **authors**: Store author information (name, bio)
-- **books**: Store book details with author references
-- **reading_list**: Track user reading progress and status
-- **reviews**: Store user reviews and ratings
+See the exercise instructions on the course platform. The short version:
+
+1. Read through schema.sql to understand the table design
+2. Create the books table in Supabase SQL Editor
+3. Insert sample books using seed.sql
+4. Create a genres table and link it with a foreign key
+5. Run verify.sql queries to check everything works
 
 ## Hints
 
-- Use UUID for primary keys with `gen_random_uuid()` as default
-- Foreign keys should reference the id columns of related tables
-- Add CHECK constraints for status fields and ratings
-- Create indexes on frequently queried columns like names and IDs
+- In Supabase: Dashboard → SQL Editor → New Query → paste SQL → Run
+- After creating tables, check the Table Editor tab to see them visually
+- Common data types: `text`, `integer`, `boolean`, `timestamp with time zone`
+- Foreign key syntax: `genre_id integer references genres(id)`
+- Use `SELECT * FROM books JOIN genres ON books.genre_id = genres.id` to test the relationship
 
-Built for [AI Code Academy](https://aicode-academy.com)
+---
+
+Built for [AI Code Academy](https://aicode-academy.com) — From Prompt to Production course.
