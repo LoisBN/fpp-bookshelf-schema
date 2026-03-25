@@ -4,9 +4,15 @@ Design a database for a bookstore: authors table, books table, foreign keys, and
 
 ## Quick Start
 
-No cloning needed — this exercise happens entirely in the **Supabase Dashboard → SQL Editor**.
+**1. Fork this repo** — Click the **Fork** button at the top right of this page.
 
-The files in this repo (`schema.sql`, `seed.sql`, `verify.sql`) are reference files you can compare your work against after completing the exercise.
+**2. Clone your fork:**
+```bash
+git clone https://github.com/YOUR-GITHUB-USERNAME/fpp-bookshelf-schema.git
+cd fpp-bookshelf-schema
+```
+
+The files in this repo (`schema.sql`, `seed.sql`, `verify.sql`) are reference files you can compare your work against after completing the exercise. The actual exercise happens entirely in the **Supabase Dashboard → SQL Editor**.
 
 ## Exercise Instructions
 
